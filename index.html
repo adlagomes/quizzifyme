@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <title>QuizzifyMe</title>
+  </head>
+
+    <div id="modal" class="d-none bg-black bg-opacity-75">
+      <div class="modal-info container bg-light text-center">
+        <p class="text-dark user-score-message">Você acertou <span>0%</span> das perguntas!</p>
+        <button class="btn btn-modal btn-outline-dark">Fechar</button>
+      </div>
+    </div>
+
+      <header class="header intro py-3 text-center border-bottom p-4">
+        <img src="./assets/img/logo.svg" class="img-fluid" alt="logo quizzifyme">
+      </header>
+      <div class="quiz py-4">
+        <div class="container">
+          <h2 class="my-3 text-center text-dark">Será que você está afiado no JavaScript?</h2>
+          <h3 class="text-center text-dark">Então responde aí<span class="text-primary">...</span></h3>
+          <fieldset class="my-4">
+            <form class="quiz-form text-dark">
+              <div>
+                <p class="lead fw-semibold">
+                  1. Qual é a diferença entre uma função síncrona e uma função
+                  assíncrona em JavaScript?
+                </p>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion1" value="A" checked />
+                    Não há diferença entre uma função síncrona e uma função
+                    assíncrona.
+                  </label>
+                </div>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion1" value="B" />
+                    Uma função síncrona retorna um valor, enquanto uma função
+                    assíncrona não retorna nenhum valor.
+                  </label>
+                </div>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion1" value="C" />
+                    Uma função síncrona é executada de forma assíncrona, enquanto
+                    uma função assíncrona é executada de forma síncrona.
+                  </label>
+                </div>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion1" value="D" />
+                    Uma função síncrona é executada de forma sequencial,
+                    bloqueando o fluxo de execução, enquanto uma função assíncrona
+                    não bloqueia o fluxo de execução e permite a continuação de
+                    outras tarefas.
+                  </label>
+                </div>
+              </div>
+  
+              <div class="my-5">
+                <p class="lead fw-semibold">
+                  2. O que é uma Promessa (Promise) em JavaScript?
+                </p>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion2" value="A" checked />
+                    Uma Promessa é uma função de ordem superior que pode ser
+                    invocada várias vezes.
+                  </label>
+                </div>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion2" value="B" />
+                    Uma Promessa é um objeto que representa a eventual conclusão
+                    ou falha de uma operação assíncrona, e seu valor resultante.
+                  </label>
+                </div>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion2" value="C" />
+                    Uma Promessa é uma estrutura de controle usada para criar
+                    loops em JavaScript.
+                  </label>
+                </div>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion2" value="D" />
+                    Uma Promessa é uma função que permite a criação de objetos
+                    personalizados em JavaScript.
+                  </label>
+                </div>
+              </div>
+  
+              <div class="my-5">
+                <p class="lead fw-semibold">
+                  3. O que é o conceito de "hoisting" em JavaScript?
+                </p>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion3" value="A" checked />
+                    "Hoisting" é o processo de atribuição automática de valores
+                    padrão aos parâmetros de uma função.
+                  </label>
+                </div>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion3" value="B" />
+                    "Hoisting" é a capacidade do JavaScript de modificar o valor
+                    de uma variável global.
+                  </label>
+                </div>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion3" value="C" />
+                    "Hoisting" é o processo de mover declarações de variáveis e
+                    funções para o topo do escopo em que estão definidas.
+                  </label>
+                </div>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion3" value="D" />
+                    "Hoisting" é uma técnica para criar objetos com herança em
+                    JavaScript.
+                  </label>
+                </div>
+              </div>
+  
+              <div class="my-5">
+                <p class="lead fw-semibold">
+                  4. O que são closures (fechamentos) em JavaScript?
+                </p>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion4" value="A" checked />
+                    Closures são blocos de código que são executados quando uma
+                    exceção ocorre em JavaScript.
+                  </label>
+                </div>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion4" value="B" />
+                    Closures são objetos que encapsulam um conjunto de
+                    propriedades e métodos em JavaScript.
+                  </label>
+                </div>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion4" value="C" />
+                    Closures são métodos utilizados para abrir e fechar arquivos
+                    em JavaScript.
+                  </label>
+                </div>
+                <div class="form-check my-4">
+                  <label class="form-check-label text-black">
+                    <input type="radio" name="inputQuestion4" value="D" />
+                    Closures são funções internas que têm acesso ao escopo de suas
+                    funções externas, mesmo após a função externa ter retornado.
+                  </label>
+                </div>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-outline-dark">Enviar</button>
+              </div>
+            </form>
+          </fieldset>
+        </div>
+      </div>
+    <footer class="card text-center">
+      <div class="card-footer text-body-secondary">
+        Feito por Adla com carinho e dedicação - 2023
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
